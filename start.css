@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background:#DAC4B8;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    font-family: monospace;
+}
+.channel{
+    position: absolute;
+    width:88%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-250px);
+    font-size: 3rem;
+    font-weight: bold;
+    color:#fff;
+    text-shadow: rgb(71, 71, 71) 3px 5px 2px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container{
+   display: flex;
+}
+.container .cube{
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  background-color: #fff;
+  margin: 1rem;
+  user-select: none;
+  position: relative;
+}
+.container .cubeB{
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background-color:#000;
+    margin: 1rem;
+    user-select: none;
+    position: relative;
+}
+.container .cube::before{
+position: absolute;
+content:'';
+width: 85%;
+height: 85%;
+background:inherit;
+border-radius: inherit;
+animation:move 3s ease-out  infinite ;
+}
+.container .cubeB::before{
+position: absolute;
+content: '';
+width: 85%;
+height: 85%;
+background:inherit;
+border-radius: inherit;
+animation:move 4s ease-out  infinite ;
+}
+@keyframes move{
+50%,
+75%{
+    transform: scale(1.8);
+}
+80%,
+100%{
+    opacity: 0;
+}
+}
+.container .cube:nth-child(1)::before{
+    animation-delay:0s;
+}
+.container .cubeB:nth-child(2)::before{
+    animation-delay:0.5s;
+}
+.container .cube:nth-child(3)::before{
+    animation-delay:1s; 
+}
+.container .cubeB:nth-child(4)::before{
+    animation-delay:1.5s;
+}
+.container .cube:nth-child(5)::before{
+    animation-delay:2s;
+}
+.btn1{
+    width: 90px;
+    height: 25px;
+    border-radius: 20px;
+    padding: 15px;
+    text-align:center;
+    background-color: #CC9766;
+    color: seashell;
+    font-size: 18px;
+    position: absolute;
+    top: 500px;
+}
+.btn1:hover{
+   background-color: tan;
+}
+a:link{
+    color: seashell;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+a:visited{
+    color:#FFD68A;
+}
